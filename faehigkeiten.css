@@ -1,0 +1,126 @@
+/* =======================
+   Globale Farb- und Schriftdefinitionen
+   ======================= */
+:root {
+    --primaer: #A0B49C;
+    --hintergrund: #FFFFFF;
+    --hintergrund-2: #DCE7DC;
+    --hintergrund-3: #F7F7F7;
+    --textfarbe: #000000;
+}
+
+/* =======================
+   Basis-Styles für die gesamte Seite
+   ======================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--hintergrund);
+    color: var(--textfarbe);
+    background-image: url("hintergrund2.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* =======================
+   Skills-Bereich: Überschrift & Kartenlayout
+   ======================= */
+.skills-section {
+    padding: 64px;
+    text-align: center;
+    position: relative;
+}
+.skills-section h1 {
+    font-size: 60px;
+    text-align: left;
+    margin-left: 268px;
+    margin-bottom: 48px;
+}
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 0 64px;
+}
+.card {
+    flex: 1;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 8px 8px 8px rgb(97, 95, 95);
+    overflow: hidden;
+    background-color: white;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.card-title {
+    background-color: var(--primaer);
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--textfarbe);
+    padding: 30px;
+}
+.card-text {
+    background-color: var(--hintergrund);
+    padding: 30px;
+    font-size: 25px;
+    text-align: left;
+    padding-bottom: 100px;
+}
+
+/* =======================
+   Responsive Design für Karten (Tablet)
+   ======================= */
+@media (max-width: 1024px) {
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+    }
+    .card {
+        width: 80%;
+        max-width: 360px;
+    }
+
+}
+/* =======================
+   Responsive Design für Karten (Handy)
+   ======================= */
+@media (max-width: 768px) {
+    .skills-section {
+        padding: 32px 0 32px 0;
+    }
+    .skills-section h1 {
+        font-size: 28px;
+        margin-left: 20px;
+        margin-bottom: 28px;
+        text-align: left;
+    }
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    }
+    .card {
+        width: 90%;
+    }
+    .card-title {
+        font-size: 24px;
+        padding: 30px;
+    }
+    .card-text {
+        font-size: 16px;
+        padding: 14px 10px 40px 10px;
+    }
+}
+
+

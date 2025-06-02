@@ -1,0 +1,99 @@
+/* =======================
+   Farb- und Schriftdefinitionen (Variablen)
+   ======================= */
+:root {
+    --primaer: #A0B49C;
+    --hintergrund: #FFFFFF;
+    --hintergrund-2: #DCE7DC;
+    --hintergrund-3: #F7F7F7;
+    --textfarbe: #000000;
+}
+
+/* =======================
+   Basis-Styles für die Seite
+   ======================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--hintergrund);
+    color: var(--textfarbe);
+    background-image: url("hintergrundPortfolio.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+
+/* =======================
+   Projektübersicht (Karten-Layout)
+   ======================= */
+.skills-section {
+    padding: 64px 0 64px 0;
+    text-align: center;
+    position: relative;
+}
+
+.skills-section h1 {
+    font-size: 54px;
+    text-align: left;
+    margin-left: 18vw;
+    margin-bottom: 48px;
+    font-weight: bold;
+    color: var(--textfarbe);
+}
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 0 64px;
+    gap: 48px;
+}
+
+.card {
+    background-color: var(--hintergrund);
+    width: 100%;
+    max-width: 340px;
+    min-width: 270px;
+    border-radius: 6px;
+    box-shadow: 8px 8px 8px rgb(97, 95, 95, 0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px;
+}
+
+.card-title {
+    background-color: var(--primaer);
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--textfarbe);
+    padding: 40px 24px 24px 24px;
+    text-align: left;
+}
+
+.code-image {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    height: auto;
+    margin-bottom: 0;
+    margin-top: 0;
+    box-shadow: 0 8px 16px rgba(60, 60, 60, 0.10);
+    border-radius: 0;
+    display: block;
+}
+
+.card-text {
+    background-color: var(--hintergrund);
+    padding: 26px 22px 64px 22px;
+    font-size: 19px;
+    text-align: left;
+    color: var(--textfarbe);
+    flex: 1;
+}
+

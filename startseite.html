@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mein Portfolio</title>
+  <link rel="stylesheet" href="navigation.css">
+  <link rel="stylesheet" href="startseite.css" />
+</head>
+<body>
+  <!-- Navigation wird dynamisch geladen -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('navigation.html')
+      .then(r => r.text())
+      .then(t => {
+        document.getElementById('nav-placeholder').innerHTML = t;
+        // Navigation-JavaScript NACH dem Einfügen laden
+        const script = document.createElement('script');
+        script.src = 'navigation.js';
+        document.body.appendChild(script);
+      });
+  </script>
+
+  <main>
+    <section id="ueber">
+      <div class="ueber-container">
+        <div class="ueber-text">
+          <h1>Über mich</h1>
+          <h3>Das bin ich</h3>
+          <p>
+            Hallo, mein Name ist Alessandro Renzetti.<br>
+            Ich bin Lernender im Bereich Applikationsentwicklung und interessiere mich besonders für das Programmieren sowie das Lösen technischer Herausforderungen.
+          </p>
+          <h3>Hobbys</h3>
+          <p>
+            In meiner Freizeit spiele ich gerne Fussball und verbringe viel Zeit mit meinen Freunden. Ausserdem finde ich es spannend, neue Technologien zu entdecken und mich stetig weiterzuentwickeln.
+          </p>
+        </div>
+        <div class="ueber-media">
+          <img src="final.jpg" alt="Profilbild" class="profilbild" />
+          <div class="video-platzhalter">
+            <video class="video-element" controls>
+              <source src="test2.mp4" type="video/mp4" />
+              Dein Browser unterstützt das Video-Tag nicht.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

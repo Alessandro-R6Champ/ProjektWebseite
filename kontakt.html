@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="navigation.css">
+  <link rel="stylesheet" href="kontakt.css" />
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('navigation.html')
+      .then(r => r.text())
+      .then(t => {
+        document.getElementById('nav-placeholder').innerHTML = t;
+        const script = document.createElement('script');
+        script.src = 'navigation.js';
+        document.body.appendChild(script);
+      });
+  </script>
+
+  <main>
+    <section class="kontakt-section">
+        <h1>Kontakt</h1>
+        <div class="kontakt-container">
+            <div class="kontakt-info">
+                <p><strong>Standort</strong></p>
+                <p>Hechtackerstrasse 18A</p>
+            </div>
+            <form class="kontakt-form">
+                <label for="vorname">Vorname</label>
+                <input type="text" id="vorname" placeholder="Vorname..." required />
+                <label for="nachname">Nachname</label>
+                <input type="text" id="nachname" placeholder="Nachname..." required />
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="E-mail..." required />
+                <button type="submit">Einreichen</button>
+                <br>
+                <div class="kontakt-footer">
+                    <div class="icons">
+                        <span><a href="https://www.instagram.com/ale_.331/?next=%2F"><img
+                                    src="insta-removebg-preview.png" alt=""></a>alee_.331</span>
+                        <span><a href="mailto:alessandro.renzetti894@gmail.com"><img src="email-removebg-preview.png" alt=""></a>Email senden</span>
+                        <span><a href="https://www.linkedin.com/in/alessandro-renzetti-252181369/"><img
+                                    src="linkdin-removebg-preview.png" alt=""></a>Linkedin</span>
+                    </div>
+                    <p class="datenschutz">©2025 Datenschutzerklärung</p>
+                </div>
+            </form>
+        </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fähigkeiten</title>
+  <link rel="stylesheet" href="navigation.css">
+  <link rel="stylesheet" href="faehigkeiten.css" />
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('navigation.html')
+      .then(r => r.text())
+      .then(t => {
+        document.getElementById('nav-placeholder').innerHTML = t;
+        const script = document.createElement('script');
+        script.src = 'navigation.js';
+        document.body.appendChild(script);
+      });
+  </script>
+
+  <main>
+    <section class="skills-section">
+      <h1>Fähigkeiten</h1>
+      <div class="cards">
+        <div class="card">
+          <div class="card-title">HTML & CSS</div>
+          <div class="card-text">
+            Ich habe bereits eigene Webseiten erstellt und dabei ein Design selbst entworfen. Für die Umsetzung habe ich die Sprache HTML und CSS verwendet.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">Teamarbeit</div>
+          <div class="card-text">
+            Ich habe jedes Mal beim Programmieren eines Programms oder einer Website im Team gearbeitet.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">Java</div>
+          <div class="card-text">
+            Ich habe bereits mehrere Programme in Java entwickelt und verstehe die Programmlogik sehr gut. Dabei konnte ich meine Kenntnisse im objektorientierten Programmierung vertiefen.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

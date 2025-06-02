@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio – Projekte</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('navigation.html')
+      .then(r => r.text())
+      .then(t => {
+        document.getElementById('nav-placeholder').innerHTML = t;
+        const script = document.createElement('script');
+        script.src = 'navigation.js';
+        document.body.appendChild(script);
+      });
+  </script>
+
+  <main>
+    <section class="skills-section">
+        <h1>Projekte</h1>
+        <div class="cards">
+            <div class="card">
+                <div class="card-title">Java Projekt</div>
+                <img src="portfoliojava.png" alt="Java Projekt Screenshot" class="code-image">
+                <div class="card-text">
+                    Das ist das GUI meines Java-Projekts.<br>
+                    In diesem Projekt habe ich ein Sparprogramm entwickelt, mit dem man Geld hinzufügen oder abziehen kann.
+                    So behält man seine Einnahmen und Ausgaben jederzeit im Blick und kann besser mit dem eigenen Budget umgehen.
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">Webseite Entwickelt</div>
+                <img src="portfoliohtml.png" alt="Webseite Projekt Screenshot" class="code-image">
+                <div class="card-text">
+                    Das ist die Webseite, die ich im Basislehrjahr programmiert habe. Auf dieser Seite kann man sich für ein Training anmelden oder abmelden.
+                    Die eingegebenen Daten werden anschließend in einer Datenbank gespeichert.
+                </div>
+            </div>
+        </div>
+    </section>
+  </main>
+</body>
+</html>
